@@ -2,7 +2,8 @@ package libs.git;
 import java.nio.file.Files
 import java.nio.file.Paths
 
-// métodos
+// método que busca o hash do último commit realizado no repositório.
+// lembre-se de configurar corretamente as credenciais de acesso ao seu repositório.
 def String getShortCommitHash(String REPO_PWD) {
     script {
         shortCommit = sh (
@@ -23,6 +24,8 @@ def String doesFileExists(String FILE_PATH, REPO_URL, REPO_NAME, REPO_BRANCH, SO
             sh "git clone -b ${REPO_BRANCH} ${REPO_URL} && cd ${REPO_NAME} && git checkout ${REPO_BRANCH}"
         }
         repoPWD = sh (
+                // esse caminho na linha abaixo é referente ao container que mantém o Jenkins. 
+                // lembre-se de alterá-lo na hora de implementar em seu projeto.
                 script: "cd /var/jenkins_home/workspace/${SONAR_PROJECTKEY} && pwd",
                 returnStdout: true
             ).trim()
