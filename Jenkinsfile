@@ -1,3 +1,4 @@
+// exemplo de configuração de pipeline fornecido pelo professor Rogério Chola, salvo para fins de estudo.
 pipeline {
     agent any
     stages {
