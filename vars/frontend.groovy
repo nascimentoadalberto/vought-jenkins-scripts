@@ -17,16 +17,16 @@ def call(body) {
 
         environment {
             // configuração do repositório
-            REPO_NAME = "Vought"
-            REPO_URL = "https://nascimentoadalberto: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@github.com/Vought-Organization/Vought.git"
-            REPO_BRANCH = "main"
-            FILE_PATH = "/var/jenkins_home/workspace/frontend/package.json"
+            REPO_NAME = "" // nome do seu repositório
+            REPO_URL = "" // url de conexão do seu repositório (para etapa de clonagem)
+            REPO_BRANCH = "" // branch alvo
+            FILE_PATH = "/var/jenkins_home/workspace/backend/vougth-api-events/api/Jenkinsfile" // edite conforme o seu projeto
 
             // configuração do IP do SonarQube
-            SONAR_PROJECTKEY = "frontend"
-            SONAR_ORG = "vought"
-            SONAR_URL = "https://272c-45-184-194-71.ngrok-free.app"
-            SONAR_LOGIN = "sqa_83560df15459290f293d744c7d2b3fb5b6def057"
+            SONAR_PROJECTKEY = "" // nome da Project Key
+            SONAR_ORG = "" // organização do Sonar
+            SONAR_URL = "" // URL para acesso ao Sonar
+            SONAR_LOGIN = "" // código hash para conexão automatizada
         }
 
         stages{
